@@ -1,10 +1,9 @@
-#include "0-putchar.h"
-
+#include "main.h"
 
 /**
- * main - Entry point
+ * entry - prints _putchar and a new line
  *
- * Return: Always  0 (success)
+ * Return: Always 0
  */
 int main(void)
 {
