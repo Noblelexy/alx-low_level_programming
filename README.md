@@ -1,1 +1,1 @@
-Write a program that prints _putchar, followed by a new line
+In most projects, we often give you only one main file to test with
