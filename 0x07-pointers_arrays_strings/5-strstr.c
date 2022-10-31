@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strstr - prints the consecutive caracters of s1 that are in s2.
@@ -10,35 +11,21 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	while (*haystack)
+	int point;
+
+	for (; *haystack; haystack++)
 	{
-		if ((*haystack == *needle && coincidence(haystack, needle) == 1) || !*needle)
+		for (point = 0; needle[point]; point++)
 		{
-			return (haystack);
+			if (!(+(haystack + point)))
+			{
+				return(NULL);
+			}
+		if (+(haystack + point) != needle[point])
+			break;
 		}
-		else
-		{
-			haystack++;
-		}
+		if (needle[point] == '\0')
+			return(haystack);
 	}
-	return (0);
-}
-/**
- * coincidence - define if the string b is inside a.
- * @a: source string
- * @b: string to be searched
- *
- * Return: 1 if there is coincidence, otherwise 0.
- */
-int coincidence(char *a, char *b)
-{
-	while (*b && *b == *a)
-	{
-		b++;
-		a++;
-	}
-	if (*b == '\0')
-		return (1);
-	else
-		return (0);
+	return(NULL);
 }
