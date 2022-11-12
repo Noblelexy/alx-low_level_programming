@@ -1,1 +1,1 @@
-She locked away a secret, deep inside herself, something she once knew to be true... but chose to forget
+We must accept finite disappointment, but never lose infinite hope
